@@ -1,0 +1,294 @@
+
+/* ==== Reset dan Font ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ==== Variabel Warna dan Mode ==== */
+:root {
+  --primary-color: #ffffff;
+  --bg-dark: #0a0a0a;
+  --bg-light: #ffffff;
+  --text-dark: #ffffff;
+  --text-light: #000000;
+  --card-bg-dark: #222;
+  --card-bg-light: #f0f0f0;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.light-mode {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ==== Header ==== */
+.main-header {
+  background: #111;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: inherit;
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* ==== Hero Section ==== */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  color: inherit;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px var(--primary-color);
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* ==== Tombol ==== */
+.btn {
+  background: var(--primary-color);
+  color: #000;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.btn:hover {
+  background: #e0e0e0;
+}
+
+/* ==== Section Umum ==== */
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section.light {
+  background: #111;
+}
+
+.section.dark {
+  background: #1a1a1a;
+}
+
+.section h3 {
+  font-size: 32px;
+  color: inherit;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+/* ==== Grid ==== */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-bg-dark);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--primary-color);
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--primary-color);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* ==== Tentang Kami ==== */
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+@media (min-width: 768px) {
+  .about-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-text,
+  .about-image {
+    flex: 1;
+  }
+
+  .about-text {
+    padding-right: 30px;
+  }
+}
+
+/* ==== Form ==== */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* ==== Footer ==== */
+.main-footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid var(--primary-color);
+  margin-top: 60px;
+}
+
+/* ==== Mode Terang ==== */
+body.light-mode .main-header,
+body.light-mode .main-footer {
+  background: var(--bg-light);
+  border-color: var(--primary-color);
+}
+
+body.light-mode nav a {
+  color: var(--text-light);
+}
+
+body.light-mode nav a:hover {
+  color: var(--primary-color);
+}
+
+body.light-mode .btn {
+  background: var(--primary-color);
+  color: #000;
+}
+
+body.light-mode .card {
+  background: var(--card-bg-light);
+  border: 1px solid var(--primary-color);
+}
+
+body.light-mode input[type="text"],
+body.light-mode input[type="email"] {
+  background: #fff;
+  color: #000;
+  border: 1px solid var(--primary-color);
+}
+
+body.light-mode input:focus {
+  box-shadow: 0 0 8px var(--primary-color);
+}

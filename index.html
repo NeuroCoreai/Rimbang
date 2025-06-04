@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rimbang Gym</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">RIMBANG GYM</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#join">Gabung</a></li>
+        </ul>
+        <button id="toggleMode" class="btn mode-toggle">🌗 Mode</button>
+      </nav>
+    </div>
+  </header>
+  
+  <section id="home" class="hero-section">
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="gymvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h2>Wujudkan Tubuh Idealmu</h2>
+        <p>Latihan bersama pelatih profesional di Rimbang Gym</p>
+        <a href="#join" class="btn">Gabung Sekarang</a>
+    </div>
+  </section>
+
+  <section id="about" class="section light">
+    <div class="container about-flex">
+      <div class="about-text">
+        <h3>Tentang Kami</h3>
+        <p>Rimbang Gym hadir sebagai tempat kebugaran terbaik dengan fasilitas modern dan pelatih bersertifikat untuk membimbing Anda mencapai tujuan kebugaran.</p>
+      </div>
+      <div class="about-image">
+        <img src="tempat.jpeg" alt="Tentang Rimbang Gym" />
+      </div>
+    </div>
+  </section>
+
+  <section id="program" class="section dark">
+    <div class="container">
+      <h3>Program Kami</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="berotot.jpg" alt="Bodybuilding" />
+          <h4>Bodybuilding</h4>
+          <p>Bangun otot dengan panduan dan program latihan khusus.</p>
+        </div>
+        <div class="card">
+          <img src="lari.jpg" alt="Fat Loss" />
+          <h4>Fat Loss</h4>
+          <p>Turunkan berat badan dengan pola latihan dan nutrisi yang tepat.</p>
+        </div>
+        <div class="card">
+          <img src="pelatih.jpg" alt="Personal Trainer" />
+          <h4>Personal Trainer</h4>
+          <p>Pendampingan langsung dari pelatih profesional bersertifikat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="section light">
+    <div class="container">
+      <h3>Gabung Sekarang</h3>
+      <form id="formJoin">
+        <input type="text" placeholder="Nama Lengkap" required />
+        <input type="email" placeholder="Email" required />
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Rimbang Gym. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
